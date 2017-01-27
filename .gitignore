@@ -51,5 +51,8 @@ jspm_packages
 # Intellij
 .idea
 
+# node installation for frontend plugin
+node
+
 
 
