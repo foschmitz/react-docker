@@ -34,6 +34,15 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <id>npm install webpack</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>install webpack</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>npm install</id>
                         <goals>
                             <goal>npm</goal>
@@ -66,6 +75,11 @@
                             <targetPath>/</targetPath>
                             <directory>.</directory>
                             <include>server.js</include>
+                        </resource>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>.</directory>
+                            <include>webpack.config.js</include>
                         </resource>
                     </resources>
                     <imageName>your-registry:5000/${project.artifactId}</imageName>

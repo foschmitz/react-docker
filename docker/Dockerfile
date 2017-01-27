@@ -10,7 +10,7 @@ WORKDIR /usr/src/app
 RUN npm install
 
 # Build the app
-RUN npm build
+RUN npm run build
 
 # Expose the app port
 EXPOSE 3000
