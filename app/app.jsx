@@ -1,10 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Greeter = require('Greeter');
-
-var firstName = 'Frank';
 
 ReactDOM.render(
-    <Greeter name={firstName} msg="Hi guys!"/>,
+    <h1>Hello Docker React!</h1>,
     document.getElementById('app')
 );

@@ -6,11 +6,7 @@ module.exports = {
     },
     resolve: {
         root: __dirname,
-        alias: {
-            Greeter: 'app/components/Greeter.jsx',
-            GreeterMessage: 'app/components/GreeterMessage.jsx',
-            GreeterForm: 'app/components/GreeterForm.jsx',
-        },
+        alias: {},
         extensions: ['', '.js', '.jsx']
 
     },
