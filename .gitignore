@@ -54,5 +54,5 @@ jspm_packages
 # node installation for frontend plugin
 node
 
-
+public/bundle.js
 
