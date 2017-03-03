@@ -9,3 +9,8 @@ mvn docker:push
 
 ### Run with
 docker run -d -p 3000:3000 your-registry:5000/react-docker
+
+# Dev
+run "webpack -w" for live changes
+
+run "node server.js" to run the server
