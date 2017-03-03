@@ -8,8 +8,6 @@ module.exports = {
         var encodedLocation = encodeURIComponent(location);
         var requestUrl = `${OPEN_WEATHER_MAP_URL}&appid=${APP_ID}&q=${encodedLocation}`;
 
-        console.log(requestUrl);
-
         return axios.get(requestUrl).then(function (res) {
             if (res.data.count < 1) {
                 throw new Error("City not found");
