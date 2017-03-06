@@ -2,7 +2,7 @@ var React = require('react');
 var {Link, IndexLink} = require('react-router');
 
 
-var Nav = React.createClass({
+var Navigation = React.createClass({
     render: function () {
         return (
             <div className="top-bar">
@@ -17,7 +17,7 @@ var Nav = React.createClass({
                 <div className="top-bar-right">
                     <ul className="menu">
                         <li className="menu-text">
-                            Created by Frank Schmitz
+                            Created by <a href="https://github.com/zishor" target="_blank">Frank Schmitz</a>
                         </li>
                     </ul>
                 </div>
@@ -25,4 +25,4 @@ var Nav = React.createClass({
         );
     }
 })
-module.exports = Nav;
+module.exports = Navigation;
