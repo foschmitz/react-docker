@@ -1,4 +1,4 @@
-FROM node:0.12
+FROM node:6
 MAINTAINER tribou
 
 # Prepare app directory
@@ -8,9 +8,6 @@ ADD . /usr/src/app
 # Install dependencies
 WORKDIR /usr/src/app
 RUN npm install
-
-# Build the app
-RUN npm run build
 
 # Expose the app port
 EXPOSE 3000
