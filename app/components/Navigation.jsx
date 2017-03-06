@@ -10,7 +10,7 @@ var Navigation = React.createClass({
                     <ul className="menu">
                         <li className="menu-text">React Docker Timer</li>
                         <li><IndexLink to="/" activeClassName="active-link">Timer</IndexLink></li>
-                        <li><Link to="/" activeClassName="active-link">Countdown</Link>
+                        <li><Link to="/countdown" activeClassName="active-link">Countdown</Link>
                         </li>
                     </ul>
                 </div>

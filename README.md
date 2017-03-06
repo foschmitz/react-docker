@@ -2,7 +2,7 @@
 React in Docker Container
 
 ### Build with 
-mvn docker:build 
+mvn clean package docker:build 
 
 ### Push to registry with 
 mvn docker:push
