@@ -2,10 +2,30 @@ var redux = require('redux');
 
 console.log("Starting redux example");
 
-var stateDefault = {name: 'Anonymous', hobbies: []};
+// Name reducer and action generators
+// ----------------------------------
+
+var nameReducer = (state = 'Anonymous', action) => {
+
+    switch (action.type) {
+        case 'CHANGE_NAME':
+            return action.name;
+        default:
+            return state
+    }
+};
+
+var changeName = (name) => {
+    return {
+        type: 'CHANGE_NAME',
+        name
+    }
+}
+
+// Hobbies reducer and action generators
+// ----------------------------------
 
 var nextHobbyId = 1;
-
 
 var hobbiesReducer = (state = [], action) => {
 
@@ -19,15 +39,19 @@ var hobbiesReducer = (state = [], action) => {
     }
 };
 
-var nameReducer = (state = 'Anonymous', action) => {
-
-    switch (action.type) {
-        case 'CHANGE_NAME':
-            return action.name;
-        default:
-            return state
+var addHobby = (hobby) => {
+    return {
+        type: 'ADD_HOBBY',
+        hobby
     }
-};
+}
+
+var removeHobby = (id) => {
+    return {
+        type: 'REMOVE_HOBBY',
+        id
+    }
+}
 
 
 var reducer = redux.combineReducers({
@@ -48,32 +72,9 @@ var unsubscribe = store.subscribe(() => {
     document.getElementById('app').innerHTML = state.name;
 });
 
-
-var action = {
-    type: 'CHANGE_NAME',
-    name: 'Andrew'
-};
-
-store.dispatch(action);
-
-
-store.dispatch({
-    type: 'ADD_HOBBY',
-    hobby: 'Running'
-});
-
-store.dispatch({
-    type: 'ADD_HOBBY',
-    hobby: 'Walking'
-});
-
-store.dispatch({
-    type: 'REMOVE_HOBBY',
-    id: '2'
-});
-
-store.dispatch({
-    type: 'CHANGE_NAME',
-    name: 'Gunter'
-});
+store.dispatch(changeName("Andrew"));
+store.dispatch(addHobby("Running"));
+store.dispatch(addHobby("Walking"));
+store.dispatch(removeHobby(2));
+store.dispatch(changeName("Gunter"));
 
